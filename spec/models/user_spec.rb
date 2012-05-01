@@ -25,7 +25,7 @@ describe User do
         end
         
         it "should create a new instance given valid attributes" do
-            User.create!(@attr)
+           User.create!(@attr)
         end
     
     it "should require a name" do
@@ -115,6 +115,7 @@ describe User do
             
             describe "has_password? method" do
                 
+                              
                 it "should be true if the passwords match" do
                     @user.has_password?(@attr[:password]).should be_true
                 end    
@@ -141,4 +142,5 @@ describe User do
                 end
             end
         end
+    end
     end

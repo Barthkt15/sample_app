@@ -18,6 +18,9 @@ describe UsersController do
         it "should find the right user" do
             get :show, :id => @user
             assigns(:user).should == @user
+            end
+            
+            
             
             it "should have the right title" do
                 get :show, :id => @user
@@ -35,7 +38,7 @@ describe UsersController do
             end
             
         
-    end
+    
     
     describe "GET 'new'" do
         
@@ -49,4 +52,5 @@ describe UsersController do
             response.should have_selector("title", :content => "Sign up")
         end
     end
+end
 end
